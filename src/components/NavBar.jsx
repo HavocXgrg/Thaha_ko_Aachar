@@ -1,12 +1,28 @@
 import React from "react";
+import { motion } from "motion/react";
+import logo from "../assets/logo.svg";
+import { CiMenuBurger } from "react-icons/ci";
+import { RxCross2 } from "react-icons/rx";
 
 const NavBar = () => {
   return (
-    <div className="w-[60vw] h-20 bg-red-400 top-8 md:ml-70 ml-14 relative">
-      <div className="absolute top-0 left-0 flex items-center justify-around w-full p-4">
-        <div className="item1 w-20 h-10 bg-blue-400"></div>
-        <div className="image-container w-20 h-10 bg-green-400"></div>
-        <div className="item2 w-20 h-10 bg-yellow-400"></div>
+    <div className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[72%] max-h-[58px] sm:max-h-[78px] bg-white rounded-full mt-6 md:mt-10 mx-auto relative flex items-center justify-center">
+      <div className=" flex items-center justify-around w-full ">
+        <div className="left-items">
+          {/* Hamburger menu toggles for mobile-devices */}
+          <motion.div className=" lg:hidden">
+            <CiMenuBurger />
+          </motion.div>
+          <div></div>
+        </div>
+
+        <img
+          className="  max-w-22 sm:max-w-34 mt-1 ml-2 cursor-pointer overflow-hidden"
+          src={logo}
+          alt=""
+        />
+
+        <div className="item2 w-20 h-5 bg-yellow-400"></div>
       </div>
     </div>
   );
