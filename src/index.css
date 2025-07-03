@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+/* src/index.css */
+@font-face {
+    font-family: 'Mooxy';
+    src: url('./assets/Fonts/mooxy.ttf') format('truetype');
+}
