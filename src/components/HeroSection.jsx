@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import NavBar from "./NavBar";
-import bg from "../assets/bg.png";
-import achar from "../assets/Thaha-pic/bg.PNG";
+import bg from "../assets/bg.webp";
+import achar from "../assets/acharr.png";
 import { motion, useAnimation } from "framer-motion"; // For animations
 import { useInView } from "react-intersection-observer"; // For scroll-based animations
 
