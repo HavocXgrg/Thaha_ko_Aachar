@@ -1,11 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, scale } from "framer-motion";
 import { BsCart4 } from "react-icons/bs";
 
 const Products = ({ data }) => {
   return (
     <section className="bg-[#f8e08e] min-h-[100vh] ">
-      <div className="min-h-[100vh] p-1 md:p-6 bg-[#f8e08e] rounded-t-3xl ">
+      <div className="min-h-[100vh] p-1 md:p-6 bg-[#f8e08e] rounded-t-xl ">
         <div className="min-h-full flex justify-between md:justify-around mt-12 mb-4">
           <h1 className="font-bold flex md:gap-4 font-[charm] ">
             <span className="text-3xl md:text-5xl">Our</span>{" "}
@@ -20,14 +20,18 @@ const Products = ({ data }) => {
           </motion.button>
         </div>
 
-        <motion.div className="bg-[#69ac7b] h-full p-4 md:gap-6 gap-4 md:p-18 rounded-t-[4rem]  md:rounded-t-[10rem] rounded-b-4xl md:rounded-b-[8rem] grid grid-cols-2 md:grid-cols-4    ">
+        <motion.div className="bg-[#69ac7b] h-full p-4 md:gap-6 gap-4 md:p-20 rounded-t-[3rem]  md:rounded-t-[10rem] rounded-b-4xl md:rounded-b-[8rem] grid grid-cols-2 md:grid-cols-4    ">
           {data.map(({ id, image, title, description, price }) => {
             return (
               <motion.div
-                className="card-box  flex flex-col items-center rounded-2xl bg-gray-300 h-[42vh] md:h-[60vh]  "
+                className="card-box  flex flex-col items-center rounded-2xl bg-gray-300 h-[42vh] md:h-[60vh] hover:cursor-pointer  "
+                whileHover={{
+                  scale: 1.06,
+                  transition: { duration: 0.3, ease: "easeInOut" },
+                }}
                 key={id}
               >
-                <motion.div className="image ">
+                <motion.div className="image " whileHover={{ scale: 1.09 }}>
                   <img
                     src={image}
                     alt={title}
@@ -43,7 +47,7 @@ const Products = ({ data }) => {
                   </span>
                 </motion.div>
                 <motion.button
-                  className="bg-red-800 flex gap-3 md:gap-4 text-white md:p-2 md:px-8 p-2 px-2 mt-2 rounded-full cursor-pointer "
+                  className="bg-red-800 hover:bg-green-800 flex gap-3 md:gap-4 text-white md:p-2 md:px-8 p-2 px-2 mt-2 rounded-full cursor-pointer "
                   whileHover={{ scale: 1.05 }}
                 >
                   <BsCart4 className="text-xl text-green-100" /> Add to Cart
