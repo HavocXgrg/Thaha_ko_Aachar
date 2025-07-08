@@ -8,16 +8,94 @@ import methiImg from "../assets/product-img/methi.png";
 import mixImg from "../assets/product-img/mix.png";
 import mulaImg from "../assets/product-img/mula.png";
 
-export const Img = [
-  { image: akabareImg, title: "Aakabare Aachar" },
-  { image: buffImg, title: "Buff Aachar" },
-  { image: chickenImg, title: "Chicken Aachar" },
-  { image: kauliImg, title: "Kauli Aachar" },
-  { image: lapsiImg, title: "Lapsi Aachar" },
-  { image: lasunImg, title: "Lasun Aachar" },
-  { image: methiImg, title: "Methi Aachar" },
-  { image: mixImg, title: "Mix Aachar" },
-  { image: mulaImg, title: "Mula Aachar" },
+export const Product = [
+  {
+    id: 1,
+    image: akabareImg,
+    title: "Aakabare Aachar",
+    description: " ",
+    price: 800,
+  },
+  { id: 2, image: buffImg, title: "Buff Aachar", description: " ", price: 800 },
+  {
+    id: 3,
+    image: chickenImg,
+    title: "Chicken Aachar",
+    description: " ",
+    price: 800,
+  },
+  {
+    id: 4,
+    image: kauliImg,
+    title: "Kauli Aachar",
+    description: " ",
+    price: 800,
+  },
+  {
+    id: 5,
+    image: lapsiImg,
+    title: "Lapsi Aachar",
+    description: " ",
+    price: 800,
+  },
+  {
+    id: 6,
+    image: lasunImg,
+    title: "Lasun Aachar",
+    description: " ",
+    price: 800,
+  },
+
+  { id: 7, image: mixImg, title: "Mix Aachar", description: " ", price: 800 },
+  { id: 8, image: mulaImg, title: "Mula Aachar", description: " ", price: 800 },
+];
+
+export const AllProduct = [
+  {
+    id: 1,
+    image: akabareImg,
+    title: "Aakabare Aachar",
+    description: " ",
+    price: 800,
+  },
+  { id: 2, image: buffImg, title: "Buff Aachar", description: " ", price: 800 },
+  {
+    id: 3,
+    image: chickenImg,
+    title: "Chicken Aachar",
+    description: " ",
+    price: 800,
+  },
+  {
+    id: 4,
+    image: kauliImg,
+    title: "Kauli Aachar",
+    description: " ",
+    price: 800,
+  },
+  {
+    id: 5,
+    image: lapsiImg,
+    title: "Lapsi Aachar",
+    description: " ",
+    price: 800,
+  },
+  {
+    id: 6,
+    image: lasunImg,
+    title: "Lasun Aachar",
+    description: " ",
+    price: 800,
+  },
+  {
+    id: 7,
+    image: methiImg,
+    title: "Methi Aachar",
+    description: " ",
+    price: 800,
+  },
+  { id: 8, image: mixImg, title: "Mix Aachar", description: " ", price: 800 },
+  { id: 9, image: mulaImg, title: "Mula Aachar", description: " ", price: 800 },
 ];
 
 export const TopProduct = [
