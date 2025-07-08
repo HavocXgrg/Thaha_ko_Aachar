@@ -32,7 +32,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-screen bg-[#9cd5e6]"
+      className="relative min-h-screen "
       aria-label="Thaha Ko Achar Hero Section"
     >
       {/* Background with Overlay */}
@@ -68,7 +68,7 @@ const HeroSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 bg-[#D32F2F] text-white text-2xl tracking-wider px-6 py-3 rounded-lg font-[Poppins] cursor-pointer hover:bg-red-800 transition-colors"
+            className="mt-6 bg-[#D32F2F] text-white text-2xl tracking-wider px-6 py-3 rounded-4xl font-[Poppins] cursor-pointer hover:bg-[#26773c] transition-colors"
           >
             Shop Now
           </motion.button>
@@ -83,10 +83,10 @@ const HeroSection = () => {
           <motion.img
             src={achar}
             alt="Traditional Thaha Ko Achar jar"
-            className="w-[80vw] md:w-[38vw] ml-6 md:ml-2 object-contain cursor-pointer"
+            className="w-[80vw] md:w-[38vw] ml-6 md:ml-2 object-contain cursor-pointer "
             loading="lazy"
             whileHover={{
-              scale: 1.08, // Scales up to 5% larger
+              scale: 1.08, //
               transition: {
                 duration: 0.3, // Animation duration
                 ease: "easeOut", // Smooth easing
