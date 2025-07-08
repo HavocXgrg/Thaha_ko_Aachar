@@ -22,7 +22,7 @@ const Carousel = ({ images }) => {
           slidesToShow: 2,
           slidesToScroll: 1,
           dots: true,
-          arrows: false, // Hide arrows on mobile for cleaner look
+          arrows: true, // Hide arrows on mobile for cleaner look
         },
       },
       {
@@ -31,14 +31,14 @@ const Carousel = ({ images }) => {
           slidesToShow: 2,
           slidesToScroll: 1,
           dots: true,
-          arrows: false,
+          arrows: true,
         },
       },
     ],
   };
 
   return (
-    <section className="flex flex-col items-center gap-4 w-full min-h-[60vh] p-4 md:p-8 bg-[#9fc0d0]  overflow-hidden">
+    <section className="flex flex-col items-center gap-4 w-full md:h-[88vh] min-h-[60vh] p-4 md:p-8 bg-[#9fc0d0]  overflow-hidden">
       <h1 className="mt-4 md:mb-6">
         <span className="italic tracking-wide font-[charm] text-3xl md:text-5xl  font-black]">
           Discover
@@ -54,8 +54,14 @@ const Carousel = ({ images }) => {
             className="px-2 sm:px-3 md:px-4  flex justify-center items-center"
           >
             <motion.div
-              className="bg-[#d3f5ff] rounded-lg  overflow-hidden "
-              whileHover={{ scale: 1.06 }}
+              className="bg-[#d3f5ff] rounded-lg cursor-pointer overflow-hidden "
+              whileHover={{
+                scale: 1.06,
+                transition: {
+                  duration: 0.3,
+                  ease: "easeOut",
+                },
+              }}
             >
               <motion.img
                 src={image.image}
