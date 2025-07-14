@@ -1,8 +1,10 @@
 import React from "react";
 import { motion, scale } from "framer-motion";
 import { BsCart4 } from "react-icons/bs";
+import { useCart } from "../Contexts/CartContext";
 
 const Products = ({ data }) => {
+  const { addToCart } = useCart();
   return (
     <section className="bg-[#f8e08e] min-h-[100vh] ">
       <div className="min-h-[100vh] p-1 md:p-6 bg-[#f8e08e] rounded-t-xl ">
@@ -49,6 +51,9 @@ const Products = ({ data }) => {
                 <motion.button
                   className="bg-red-800 hover:bg-green-800 flex gap-3 md:gap-4 text-white md:p-2 md:px-8 p-2 px-2 mt-2 rounded-full cursor-pointer "
                   whileHover={{ scale: 1.05 }}
+                  onClick={() =>
+                    addToCart({ id, image, title, description, price })
+                  }
                 >
                   <BsCart4 className="text-xl text-green-100" /> Add to Cart
                 </motion.button>
