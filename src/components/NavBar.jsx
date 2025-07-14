@@ -5,14 +5,18 @@ import { CiMenuBurger } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 import { BsCart4 } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
+import { useCart } from "../Contexts/CartContext";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navItems = [
-    { name: "Home", href: "#" },
+    { name: "Home", href: "/" },
     { name: "Shop All", href: "#" },
     { name: "About", href: "#" },
     { name: "Contact", href: "#" },
@@ -62,23 +66,37 @@ const NavBar = () => {
         {/* Desktop Menu Items (Right) */}
         <div className="hidden lg:flex items-center gap-12">
           {navItems.slice(2).map((item, index) => (
-            <a
+            <Link
               key={index}
               href={item.href}
               className=" text-[#085e2b] hover:text-[#D32F2F] text-xl tracking-wider font-medium transition-colors cursor-pointer"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
           <div className="w-26 gap-8 text-green-900 h-12  cursor-pointer flex items-center justify-center">
-            <BsCart4 className="text-3xl" />
+            <Link to="/cart" className="relative">
+              <BsCart4 className="text-3xl" />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-4 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
             <CgProfile className="text-3xl" />
           </div>
         </div>
 
-        {/* Mobile Cart Icon */}
+        {/* Mobile Cart & profile Icon */}
         <div className="lg:hidden w-26 h-14  gap-8 flex items-center justify-center cursor-pointer text-green-900 ">
-          <BsCart4 className="text-3xl" />
+          <Link to="/cart" className="relative">
+            <BsCart4 className="text-3xl" />
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-4 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
+                {cartCount}
+              </span>
+            )}
+          </Link>
           <CgProfile className="text-3xl" />
         </div>
       </motion.div>
@@ -95,14 +113,14 @@ const NavBar = () => {
           >
             <div className="flex flex-col items-center gap-8 py-6">
               {navItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
                   href={item.href}
                   className="text-2xl font-medium text-[#1F2A44] hover:text-[#D32F2F] transition-colors cursor-pointer"
                   onClick={toggleMenu}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
