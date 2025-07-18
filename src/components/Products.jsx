@@ -2,6 +2,7 @@ import React from "react";
 import { motion, scale } from "framer-motion";
 import { BsCart4 } from "react-icons/bs";
 import { useCart } from "../Contexts/CartContext";
+import { Bounce, toast } from "react-toastify";
 
 const Products = ({ data }) => {
   const { addToCart } = useCart();
@@ -51,9 +52,20 @@ const Products = ({ data }) => {
                 <motion.button
                   className="bg-red-800 hover:bg-green-800 flex gap-3 md:gap-4 text-white md:p-2 md:px-8 p-2 px-2 mt-2 rounded-full cursor-pointer "
                   whileHover={{ scale: 1.05 }}
-                  onClick={() =>
-                    addToCart({ id, image, title, description, price })
-                  }
+                  onClick={() => {
+                    addToCart({ id, image, title, description, price });
+                    toast.success("Product added successfully!", {
+                      position: "top-right",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: false,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "dark",
+                      transition: Bounce,
+                    });
+                  }}
                 >
                   <BsCart4 className="text-xl text-green-100" /> Add to Cart
                 </motion.button>
