@@ -11,15 +11,15 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { getCartCount } = useCart();
-  const cartCount = getCartCount();
+  const cartCount = getCartCount(); //method defined in App.jsx is stored in the variable for an ease use
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Shop All", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Home", to: "/" },
+    { name: "Shop All", to: "#" },
+    { name: "About", to: "#" },
+    { name: "Contact", to: "#" },
   ];
 
   return (
@@ -36,13 +36,13 @@ const NavBar = () => {
         {/* Desktop Menu Items (Left) */}
         <div className="hidden lg:flex items-center gap-6 ml-14">
           {navItems.slice(0, 2).map((item, index) => (
-            <a
+            <Link
               key={index}
-              href={item.href}
+              to={item.to}
               className="text-[#085e2b] hover:text-[#D32F2F] text-xl tracking-wider font-medium transition-colors cursor-pointer"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -68,7 +68,7 @@ const NavBar = () => {
           {navItems.slice(2).map((item, index) => (
             <Link
               key={index}
-              href={item.href}
+              to={item.to}
               className=" text-[#085e2b] hover:text-[#D32F2F] text-xl tracking-wider font-medium transition-colors cursor-pointer"
             >
               {item.name}
@@ -115,7 +115,7 @@ const NavBar = () => {
               {navItems.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.href}
+                  to={item.to}
                   className="text-2xl font-medium text-[#1F2A44] hover:text-[#D32F2F] transition-colors cursor-pointer"
                   onClick={toggleMenu}
                 >
