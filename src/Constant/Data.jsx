@@ -14,7 +14,7 @@ export const Product = [
     image: akabareImg,
     title: "Aakabare Aachar",
     description: " ",
-    price: 800,
+    price: 1000,
   },
   { id: 2, image: buffImg, title: "Buff Aachar", description: " ", price: 800 },
   {
@@ -22,14 +22,14 @@ export const Product = [
     image: chickenImg,
     title: "Chicken Aachar",
     description: " ",
-    price: 800,
+    price: 1200,
   },
   {
     id: 4,
     image: kauliImg,
     title: "Kauli Aachar",
     description: " ",
-    price: 800,
+    price: 600,
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ export const Product = [
     price: 800,
   },
 
-  { id: 7, image: mixImg, title: "Mix Aachar", description: " ", price: 800 },
+  { id: 7, image: mixImg, title: "Mix Aachar", description: " ", price: 900 },
   { id: 8, image: mulaImg, title: "Mula Aachar", description: " ", price: 800 },
 ];
 
@@ -56,7 +56,7 @@ export const AllProduct = [
     image: akabareImg,
     title: "Aakabare Aachar",
     description: " ",
-    price: 800,
+    price: 1000,
   },
   { id: 2, image: buffImg, title: "Buff Aachar", description: " ", price: 800 },
   {
@@ -64,14 +64,14 @@ export const AllProduct = [
     image: chickenImg,
     title: "Chicken Aachar",
     description: " ",
-    price: 800,
+    price: 1200,
   },
   {
     id: 4,
     image: kauliImg,
     title: "Kauli Aachar",
     description: " ",
-    price: 800,
+    price: 700,
   },
   {
     id: 5,
@@ -94,7 +94,7 @@ export const AllProduct = [
     description: " ",
     price: 800,
   },
-  { id: 8, image: mixImg, title: "Mix Aachar", description: " ", price: 800 },
+  { id: 8, image: mixImg, title: "Mix Aachar", description: " ", price: 900 },
   { id: 9, image: mulaImg, title: "Mula Aachar", description: " ", price: 800 },
 ];
 
