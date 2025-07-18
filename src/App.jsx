@@ -8,26 +8,42 @@ import { CartProvider } from "./Contexts/CartContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
 import NavBar from "./components/NavBar";
+import { Bounce, ToastContainer, toast } from "react-toastify";
 
 const App = () => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    setCart((prevItem) => {
-      const existingItem = prevItem.find((cartItem) => cartItem.id === item.id);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
       if (existingItem) {
-        return prevItem.map((cartItem) =>
+        return prevCart.map((cartItem) =>
           cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
             : cartItem
         );
       }
-      return [...prevItem, { ...item, quantity: 1 }];
+      return [...prevCart, { ...item, quantity: 1 }];
     });
   };
 
   const getCartCount = () => {
     return cart.reduce((total, item) => total + item.quantity, 0);
+  };
+
+  const deleteFromCart = (itemId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== itemId)); //filter gives new array keeping only unmatched id items.
+  };
+  const updateQuantity = (itemId, newQuantity) => {
+    if (newQuantity <= 0) {
+      deleteFromCart(itemId);
+    } else {
+      setCart((prevCart) =>
+        prevCart.map((item) =>
+          item.id === itemId ? { ...item, quantity: newQuantity } : item
+        )
+      );
+    }
   };
 
   useEffect(() => {
@@ -42,7 +58,9 @@ const App = () => {
   }, [cart]);
 
   return (
-    <CartProvider value={{ cart, addToCart, getCartCount }}>
+    <CartProvider
+      value={{ cart, addToCart, getCartCount, deleteFromCart, updateQuantity }}
+    >
       <BrowserRouter>
         <div>
           <NavBar />
@@ -60,6 +78,19 @@ const App = () => {
             <Route path="/cart" element={<Cart />} />
           </Routes>
           <Footer />
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            transition={Bounce}
+          />
         </div>
       </BrowserRouter>
     </CartProvider>
