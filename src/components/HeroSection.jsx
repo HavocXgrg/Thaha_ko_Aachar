@@ -47,9 +47,6 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-[#1F2A4480]" />{" "}
       </div>
 
-      {/* Navbar */}
-      <NavBar />
-
       {/* Content */}
       <div className="absolute inset-0 flex flex-col-reverse md:flex-row justify-center items-center p-4 md:p-8">
         <motion.div
