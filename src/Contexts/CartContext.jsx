@@ -5,6 +5,8 @@ export const CartContext = createContext({
   cart: [],
   addToCart: () => {},
   getCartCount: () => 0,
+  deleteFromCart: () => {},
+  updateQuantity: () => {},
 });
 
 export const useCart = () => useContext(CartContext); //custom hook that wraps our contexts.
