@@ -3,12 +3,13 @@ import HeroSection from "./components/HeroSection";
 import Products from "./components/Products";
 import Carousel from "./components/Carousel";
 import { TopProduct, Product } from "./Constant/Data";
-import Footer from "./components/Footer";
+import About from "./components/About";
 import { CartProvider } from "./Contexts/CartContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
 import NavBar from "./components/NavBar";
 import { Bounce, ToastContainer, toast } from "react-toastify";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -72,15 +73,18 @@ const App = () => {
                   <HeroSection />
                   <Carousel images={TopProduct} />
                   <Products data={Product} />
+                  <About />
                 </>
               }
             />
+
             <Route path="/cart" element={<Cart />} />
           </Routes>
           <Footer />
+
           <ToastContainer
             position="top-right"
-            autoClose={5000}
+            autoClose={1000}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick={false}
