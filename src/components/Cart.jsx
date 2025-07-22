@@ -83,7 +83,7 @@ const Cart = () => {
                       deleteFromCart(item.id);
                       toast.error("Product removed from cart!", {
                         position: "top-right",
-                        autoClose: 5000,
+                        autoClose: 1000,
                         hideProgressBar: false,
                         closeOnClick: false,
                         pauseOnHover: true,

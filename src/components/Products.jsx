@@ -27,7 +27,7 @@ const Products = ({ data }) => {
           {data.map(({ id, image, title, description, price }) => {
             return (
               <motion.div
-                className="card-box  flex flex-col items-center rounded-2xl bg-gray-300 h-[42vh] md:h-[60vh] hover:cursor-pointer  "
+                className="card-box  flex flex-col items-center rounded-2xl bg-gray-300  h-[36vh] md:h-[43vh] hover:cursor-pointer  "
                 whileHover={{
                   scale: 1.06,
                   transition: { duration: 0.3, ease: "easeInOut" },
@@ -38,7 +38,7 @@ const Products = ({ data }) => {
                   <img
                     src={image}
                     alt={title}
-                    className=" md:h-[42vh] h-[26vh]  "
+                    className=" md:h-[26vh] h-[20vh]  "
                   />
                 </motion.div>
                 <motion.div className="description text-center">
@@ -56,7 +56,7 @@ const Products = ({ data }) => {
                     addToCart({ id, image, title, description, price });
                     toast.success("Product added successfully!", {
                       position: "top-right",
-                      autoClose: 5000,
+                      autoClose: 1000,
                       hideProgressBar: false,
                       closeOnClick: false,
                       pauseOnHover: true,
