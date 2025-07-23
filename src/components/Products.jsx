@@ -11,8 +11,10 @@ const Products = ({ data }) => {
       <div className="min-h-[100vh] p-1 md:p-6 bg-[#f8e08e] rounded-t-xl ">
         <div className="min-h-full flex justify-between md:justify-around mt-12 mb-4">
           <h1 className="font-bold flex md:gap-4 font-[charm] ">
-            <span className="text-3xl md:text-5xl">Our</span>{" "}
-            <span className="text-3xl md:text-5xl text-green-900">Product</span>
+            <span className="text-3xl md:text-6xl">Our</span>{" "}
+            <span className="text-3xl md:text-6xl font-[vodkabrush] tracking-wider text-green-900">
+              Product
+            </span>
           </h1>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -23,7 +25,7 @@ const Products = ({ data }) => {
           </motion.button>
         </div>
 
-        <motion.div className="bg-[#69ac7b] h-full p-4 md:gap-6 gap-4 md:p-20 rounded-t-[3rem]  md:rounded-t-[10rem] rounded-b-4xl md:rounded-b-[8rem] grid grid-cols-2 md:grid-cols-4    ">
+        <motion.div className="bg-[#105b3c] h-full p-4 md:gap-6 gap-4 md:p-20 rounded-t-[3rem]  md:rounded-t-[10rem] rounded-b-4xl md:rounded-b-[8rem] grid grid-cols-2 md:grid-cols-4    ">
           {data.map(({ id, image, title, description, price }) => {
             return (
               <motion.div

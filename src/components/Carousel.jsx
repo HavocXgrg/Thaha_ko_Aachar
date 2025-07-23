@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -38,16 +39,16 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <section className="flex flex-col items-center gap-4 w-full md:h-[88vh] min-h-[60vh] p-4 md:p-8 bg-[#9fc0d0]  overflow-hidden">
-      <h1 className="mt-4 md:mb-6">
-        <span className="italic tracking-wide font-[charm] text-3xl md:text-5xl  font-black]">
-          Discover
+    <section className="flex flex-col items-center gap-4 w-full md:h-[88vh] min-h-[60vh] p-4 md:p-8 bg-[#1f4a39]  overflow-hidden">
+      <h1 className="mt-4 md:mb-6 ">
+        <span className=" tracking-tighter font-[charm] text-3xl md:text-5xl text-gray-200 ]">
+          DISCOVER
         </span>{" "}
-        <span className="text-green-900 font-bold md:text-6xl text-4xl font-[charm]">
+        <span className="text-gray-300 md:ml-6 font-bold md:text-6xl text-4xl font-[vodkabrush] tracking-widest ">
           Top Picks
         </span>
       </h1>
-      <Slider {...settings} className="w-full max-w-7xl mt-6 ">
+      <Slider {...settings} className="w-full max-w-7xl mt-2 ">
         {images.map((image, index) => (
           <div
             key={index}
