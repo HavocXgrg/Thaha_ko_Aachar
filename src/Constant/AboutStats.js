@@ -78,7 +78,7 @@ export const reviewData = [
     rating: 5,
     date: "2024-07-15",
     reviewText:
-      "Absolutely thrilled with the service! The team went above and beyond my expectations. Highly recommend!",
+      "Thaha ko Achar is delicious with vibrant flavors! The website is easy to navigate, and buying was a breeze.",
     profilePic: bishwa,
   },
   {
@@ -87,7 +87,7 @@ export const reviewData = [
     rating: 4,
     date: "2024-07-10",
     reviewText:
-      "Good quality products and fast delivery. There was a minor delay in communication, but overall satisfied.",
+      "Tasty Thaha ko Achar and a user-friendly website, though order confirmation was slightly delayed.",
     profilePic: sankalpa,
   },
   {
@@ -96,7 +96,7 @@ export const reviewData = [
     rating: 5,
     date: "2024-07-08",
     reviewText:
-      "Fantastic experience from start to finish. The website is easy to navigate and the support was excellent.",
+      "Thaha ko Achar exceeded my expectations! The pickles are bursting with flavor, and the ordering process was seamless.",
     profilePic: prashan,
   },
   {
