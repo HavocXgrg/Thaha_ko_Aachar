@@ -32,12 +32,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#1f4a39] w-full bg-[url('/green.jpg')] bg-cover bg-center max-h-[636px] aspect-[1.2] lg:aspect-[4.26] min-h-[400px] flex items-center justify-center">
+    <footer className="relative bg-[#1f4a39] w-full bg-[url('/green.jpg')] bg-cover bg-center  lg:aspect-[4.26] min-h-[55vh] flex items-center justify-center">
       {/* Overlay for dimming */}
       <div className="absolute inset-0 bg-[#105b3c]/80"></div>
 
       {/* Main content container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row gap-8">
+      <div className="relative z-10 w-full  mx-auto px-8 sm:px-6 md:px-24 py-12 flex flex-col md:flex-row gap-8">
         {/* Branding and Description */}
         <div className="flex-1 text-white">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
