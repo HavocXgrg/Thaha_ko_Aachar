@@ -5,3 +5,7 @@
     font-family: 'Mooxy';
     src: url('./assets/Fonts/mooxy.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'vodkabrush';
+    src: url('./assets/Fonts/vodkabrush.otf') format('truetype');
+}
