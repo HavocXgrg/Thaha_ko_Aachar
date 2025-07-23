@@ -9,7 +9,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
 import NavBar from "./components/NavBar";
 import { Bounce, ToastContainer, toast } from "react-toastify";
+
 import Footer from "./components/Footer";
+import VideoComponent from "./components/VideoComponent";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -71,6 +73,7 @@ const App = () => {
               element={
                 <>
                   <HeroSection />
+                  <VideoComponent />
                   <Carousel images={TopProduct} />
                   <Products data={Product} />
                   <About />
