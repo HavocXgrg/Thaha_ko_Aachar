@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
+import VideoComponent from "./VideoComponent";
 
 const About = () => {
   const settings = {
@@ -43,7 +44,7 @@ const About = () => {
     <section className=" min-h-[180vh]  bg-[#f8e08e] ">
       <div className="container-first p-2 md:p-4 md:px-8">
         <h1 className="flex items-center justify-center text-2xl md:text-4xl tracking-wide font-bold text-green-900 mt-12 md:mb-18">
-          The Numbers Tell The Story
+          <u>The Numbers Tell The Story</u>
         </h1>
 
         <div className="grid grid-cols-2 md:grid-cols-4 mt-6 gap-4 md:px-10">
@@ -65,9 +66,9 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container-second mt-12 ">
+      <div className="container-second mt-12 mb-12">
         <h1 className="flex items-center justify-center text-2xl md:text-4xl font-bold text-green-900">
-          What Sets Us Apart
+          <u>What Sets Us Apart</u>
         </h1>
         <div className="card mt-4 md:mt-12 md:p-6 p-4 grid grid-cols-2 md:grid-cols-5 gap-6">
           {cardData.map(({ id, title, description, img }) => (
@@ -94,6 +95,9 @@ const About = () => {
           ))}
         </div>
       </div>
+
+      {/* Video component usage */}
+      <VideoComponent />
 
       <div className="container-third mt-14 flex flex-col  items-center ">
         <h1 className=" md:mt-6 font-bold text-2xl md:text-4xl text-green-800">
